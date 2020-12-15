@@ -41,7 +41,7 @@
     <!-- Footer Text -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-1 bg-dark">© 2020 Copyright: DAD
+    <div class="footer-copyright text-center py-1 bg-dark">© 2020 Copyright: Spacex Colombia
     </div>
     <!-- Copyright -->
 
