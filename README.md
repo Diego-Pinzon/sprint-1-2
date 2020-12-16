@@ -1,4 +1,4 @@
-# pryecto_sprint2
+# Proyecto_sprint2
 
 10/ Dec
 Se realizó reunión del equipo de trabajo donde se realizó una presentación de los participantes,
