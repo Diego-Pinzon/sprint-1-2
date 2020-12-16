@@ -1,5 +1,5 @@
 <template>
-<div id="Noticias"  class="row mt-md-5 mt-sm-5 mt-xs-5">
+<div  class="row mt-md-5 mt-sm-5 mt-xs-5">    
     <div class="col-lg-6 col-xs-12" v-for="(infoNoticia,index) of infoNoticias" :key="index">
         <div class="d-flex justify-content-center align-items-center" >
 
@@ -12,13 +12,16 @@
                 
                 <p>
                     {{infoNoticia.description}}
+                    
                 </p>
                 
             </div>
 
         </div>
         <div class="d-flex container-fluid justify-content-end pb-2 mt-n2" >
-            <button type="button" onclick=":location.href='infoNoticia.url'" class="btn btn-outline-info">Info</button>
+            <a :href="infoNoticia.url" target="_blank">
+                <button type="button" class="btn btn-outline-info">Info</button>
+            </a>
         </div>
     </div>
 </div>
