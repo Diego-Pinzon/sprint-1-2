@@ -8,16 +8,16 @@
         <div class="collapse navbar-collapse justify-content-end " id="navbarNav ">
             <ul class="navbar-nav ">
                 <li class="nav-item active ">
-                    <a class="nav-link " href="#Servicios">Servicios <span class="sr-only ">(current)</span></a>
+                    <a class="nav-link " href="#services">Servicios <span class="sr-only ">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="#Noticias">Noticias</a>
+                    <a class="nav-link " href="#news">Noticias</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="#Equipo">Equipo</a>
+                    <a class="nav-link " href="#team">Equipo</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="#Contacto" >Contacto</a>
+                    <a class="nav-link " href="#footer" >Contacto</a>
                 </li>
             </ul>
         </div>
