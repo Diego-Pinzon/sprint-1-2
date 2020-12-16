@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="equipo">
         
         <div class="card text-white bg-dark">
             <div class="d-flex justify-content-center p-2">

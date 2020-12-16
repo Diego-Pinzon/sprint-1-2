@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-6 col-xs-12">
+    <div id="news" class="col-lg-6 col-xs-12">
         <div class="d-flex justify-content-center align-items-center">
 
             <div class="p-3">
