@@ -18,7 +18,7 @@
         caption="Viaje a Marte"
         text="Quieres vivir una experiencia de otro planeta... pues tenemos el plan perfecto para ti, te invitamos a conocer los detalles de 
         nuestra experiencia, agenda tu cita y un asesor se pondrá en contacto para brindarte todos los detalles!"
-        img-src="https://imgur.com/sONFIr2.jpg"
+        img-src="https://i.imgur.com/sONFIr2.jpg"
       ></b-carousel-slide>
 
       <b-carousel-slide

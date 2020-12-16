@@ -34,7 +34,7 @@ export default {
     },
     created(){
         axios
-            .get("http://api.mediastack.com/v1/news?access_key=2e66c51754dfe7a4b152bb11e76ee04b&sources=cnn,nytimes&keywords=spacex")
+            .get("http://api.mediastack.com/v1/news?access_key=2e66c51754dfe7a4b152bb11e76ee04b&sources=cnn,bbc&keywords=spacex")
             .then(response => {this.infoNoticias= response.data.data.slice (0,4)}).catch(error=> console.log(error))
         console.log(this.infoNoticias)
     }
