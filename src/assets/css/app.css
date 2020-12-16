@@ -1,0 +1,9 @@
+img.zoom {
+    width: 20px;
+    height: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.transition {
+    transform: scale(1.5);
+}
