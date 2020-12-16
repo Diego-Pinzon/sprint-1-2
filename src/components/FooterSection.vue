@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="Contacto">
         <footer class="footer ">
             <div class="d-flex justify-content-center">
                 <div class="col-md-2">

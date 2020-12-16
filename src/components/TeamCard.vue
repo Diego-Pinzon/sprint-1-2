@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="Equipo">
         <div class = "card bg-light">
             <div class = "d-flex justify-content-center p-2">
                 <img :src="member.image" with="200px" height="200px" alt="imagenperfil" class="rounded-circle z-depth-2" data-holder-rendered="true">

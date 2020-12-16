@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="Servicios">
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -15,20 +15,22 @@
     >
       <!-- Text slides with image -->
       <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
+        caption="Viaje a Marte"
+        text="Quieres vivir una experiencia de otro planeta... pues tenemos el plan perfecto para ti, te invitamos a conocer los detalles de 
+        nuestra experiencia, agenda tu cita y un asesor se pondrá en contacto para brindarte todos los detalles!"
+        img-src="https://imgur.com/sONFIr2.jpg"
       ></b-carousel-slide>
 
       <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
+        caption="Tour Instalaciones"
+        text="Te daremos un tour guiado pro nuestras instalaciones para que conozcas el mundo interno donde los sueños de ir a otro planeta se
+        hacen realidad!"
+        img-src="https://i.imgur.com/uGYEijk.jpg"
       ></b-carousel-slide>
       <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
+        caption="Accesorios"
+        text="Quieres estar equipado con todo lo que necesitas para emprender tu viaje, entra y hazte con todo lo que necesitas para estar en sintonía con la aventura."
+        img-src="https://i.imgur.com/cGBvWri.jpg"
       ></b-carousel-slide>
 
     </b-carousel>
