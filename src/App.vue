@@ -5,13 +5,13 @@
     <services-section> </services-section>
 
     <!-- news -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="section-news">
         <div class="row mt-md-5 mt-sm-5 mt-xs-5">
          <news-section> </news-section>   
         </div>
     </div>
     <!-- team -->
-    <div class="container-fluid">
+    <div class="container-fluid" id ="section-team">
       <div class="row justify-content-center mb-5">
         <div class="col mt-5" v-for="(integrante, id) of Equipo" :key="id">
         <team-card :member="integrante"> </team-card>
