@@ -5,14 +5,14 @@
     
     <!-- news -->
     <div id="news" class="container-fluid">
-      <h1 class="text-center" style="italic" >Noticias</h1>
+      <h1 class="text-center news" style="italic" >Noticias</h1>
       <br>
       <news-section> </news-section>   
       </div>
     
     <!-- team -->
     <div id="team" class="container-fluid">
-      <h1 class="text-center" style="italic" >Nuestro Equipo</h1>
+      <h1 class="text-center news" style="italic" >Nuestro Equipo</h1>
         <br>
       <div class="row justify-content-center mb-5">
         <div class="col mt-5" v-for="(integrante, id) of Equipo" :key="id">
@@ -53,5 +53,10 @@ export default {
   }
 }
 </script>,
+<style>
+.news {
+  margin-top : 5%;
+}
+</style>
     
 
