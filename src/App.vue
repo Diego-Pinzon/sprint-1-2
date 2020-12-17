@@ -15,8 +15,8 @@
       <h1 class="text-center news" style="italic" >Nuestro Equipo</h1>
         <br>
       <div class="row justify-content-center mb-5">
-        <div class="col mt-5" v-for="(integrante, id) of Equipo" :key="id">
-        <team-card :member="integrante"> </team-card>
+        <div class="col mt-5" v-for="(integrante, id) of team" :key="id">
+        <team-card v-bind:member="integrante"> </team-card>
         </div>
       </div>
     </div>
@@ -33,7 +33,6 @@ import CarouselSection from './components/CarouselSection.vue'
 import FooterSection from './components/FooterSection.vue'
 import TeamCard from './components/TeamCard.vue'
 import NewsSection from './components/NewsSection.vue'
-import datosequipo from '../public/datosequipo.json'
 
 export default {
   name: 'App',
@@ -44,11 +43,37 @@ export default {
     TeamCard,
     NewsSection
   },
-  computed: {
-    Equipo() {
-      return datosequipo.Equipo.map((miembros) => {
-        return miembros;
-      })
+  data(){
+    return{
+      team:[
+      {
+        codigo: 1,
+        nombre: "Nilson Nicolas Vijalba Caballero",
+        descripcion: "Ingeniero en automatización, experencia en desarrollo de pyhton, php, conocimientos en robotica y control industrial.",
+        rol: "Programador",
+        image: "https://i.imgur.com/j4lJwq6.jpg",
+        whatsapp: "https://api.whatsapp.com/send?phone=573208433176",
+        facebook: "https://m.me/nicovijalba"
+      },
+      {
+        codigo: 2,
+        nombre: "Diego Alexander Pinzón Mendivelso",
+        descripcion: "Ingeniero Aeronáutico, con experiencia en Quality Control, Quality Assurance y Compliance en la industria aérea colombiana.",
+        rol: "Programador",
+        image: "https://i.imgur.com/FCmEGJ0.png",
+        whatsapp: "https://api.whatsapp.com/send?phone=573007040873",
+        facebook: "https://m.me/nicovijalba"
+      },
+      {
+        codigo: 3,
+        nombre: "Juan Sebastián González Rojas",
+        descripcion: "Ingeniero Electrónico.  Apasionado por la ciencia, la Ingeniería, el dibujo y aprender cosas nuevas.",
+        rol: "Programador",
+        image: "https://i.imgur.com/rwTZ74g.jpg",
+        whatsapp: "https://api.whatsapp.com/send?phone=573176550376",
+        facebook: "https://m.me/nicovijalba"
+      }
+    ]
     }
   }
 }
