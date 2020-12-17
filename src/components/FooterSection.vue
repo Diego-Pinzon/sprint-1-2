@@ -1,54 +1,72 @@
 <template>
-    <!-- Footer -->
-<footer class="page-footer bg-secondary text-white pt-4">
-
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
-
-        <!-- Grid row -->
-        <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-
-                <!-- Content -->
-                <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae
-                    commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat.
-                    Itaque, culpa?</p>
-
+    <div id="footer">
+        <footer class="footer ">
+            <div class="d-flex justify-content-center">
+                <div class="col-md-2">
+                    <h5 class="text-md-right">Contactenos</h5>
+                    <hr>
+                </div>
+                <div class="col-md-5">
+                    <form @submit.prevent="sendEmail">
+                        <div class="form-group">
+                            <input class="form-control" type="text" v-model="name" name="name"
+                                placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" v-model="email" name="email"
+                                placeholder="Ingrese su email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" v-model="message" cols="30" rows="5"
+                                placeholder="Message">
+                            </textarea>
+                        </div>
+                        <div class="form-group text-xs-right">
+                            <button type="submit" class="btn btn-primary" value="Send">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
-            <div class="col-md-6 mb-md-0 mb-3">
-
-                <!-- Content -->
-                <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi
-                    aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi
-                    hic.</p>
-
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href=""> SpaceXColombia</a>
             </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
+        </footer>
+        
     </div>
-    <!-- Footer Text -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-1 bg-dark">© 2020 Copyright: Spacex Colombia
-    </div>
-    <!-- Copyright -->
-
-</footer>
 </template>
+
 <script>
-export default {
-    name: 'FooterSection',
-}
+    import emailjs from 'emailjs-com'
+
+    export default {
+        name: 'ContactUs',
+        data() {
+            return {
+                name: '',
+                email: '',
+                message: ''
+            }
+        },
+        methods: {
+            sendEmail(e) {
+                try {
+                    emailjs.sendForm('service_98j3trb', 'template_xll1dxp', e.target,
+                        'user_cjyheEvO3I9xP9DDPA9Z9', {
+                            name: this.name,
+                            email: this.email,
+                            message: this.message
+                        })
+
+                } catch (error) {
+                    console.log({
+                        error
+                    })
+                }
+                // Reset form field
+                this.name = ''
+                this.email = ''
+                this.message = ''
+            },
+        }
+    }
 </script>

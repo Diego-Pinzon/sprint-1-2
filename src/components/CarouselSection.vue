@@ -1,49 +1,58 @@
 <template>
-  <!-- carousel -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../assets/Mars.jpg" class="d-block w-100" style="width:100%" alt="Marte">
-            
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Viaje a Marte</h5>
-          <p>Quieres vivir una experiencia de otro planeta... pues tenemos el plan perfecto para ti, te invitamos a conocer los detalles de 
-          nuestra experiencia, dejanos tus datos y un asesor se pondrá en contacto para brindarte todos los detalles!</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../assets/Tour.jpg" class="d-block w-100" style="width:100%" alt="Tour">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Tour Instalaciones</h5>
-          <p>Te daremos un tour guiado pro nuestras instalaciones para que conozcas el mundo interno donde los sueños de ir a otro planeta se
-          hacen realidad!</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../assets/Shop.jpg" class="d-block w-100" style="width:100%" alt="Acccesorios">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Accesorios</h5>
-          <p>Quieres estar equipado con todo lo que necesitas para emprender tu viaje, entra y hazte con todo lo que necesitas para estar en sintonía con la aventura.</p>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" onclick="plusSlides(-1)" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" onclick="plusSlides(1)" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+  <div id="services">
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="3000"
+      controls
+      indicators
+      background="#ccc"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #000;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <!-- Text slides with image -->
+      <b-carousel-slide
+        caption="Viaje a Marte"
+        text="Quieres vivir una experiencia de otro planeta... pues tenemos el plan perfecto para ti, te invitamos a conocer los detalles de 
+        nuestra experiencia, agenda tu cita y un asesor se pondrá en contacto para brindarte todos los detalles!"
+        img-src="https://i.imgur.com/sONFIr2.jpg"
+      ></b-carousel-slide>
+
+      <b-carousel-slide
+        caption="Tour Instalaciones"
+        text="Te daremos un tour guiado pro nuestras instalaciones para que conozcas el mundo interno donde los sueños de ir a otro planeta se
+        hacen realidad!"
+        img-src="https://i.imgur.com/uGYEijk.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        caption="Accesorios"
+        text="Quieres estar equipado con todo lo que necesitas para emprender tu viaje, entra y hazte con todo lo que necesitas para estar en sintonía con la aventura."
+        img-src="https://i.imgur.com/cGBvWri.jpg"
+      ></b-carousel-slide>
+
+    </b-carousel>
   </div>
 </template>
+
 <script>
-export default {
-    name: 'CarouselSection'
- }
+    export default {
+        name: 'CarouselSection',
+        data() {
+            return {
+                slide: 0,
+                sliding: null
+            }
+        },
+        methods: {
+            onSlideStart() {
+                this.sliding = true
+            },
+            onSlideEnd() {
+                this.sliding = false
+            }
+        }
+    }
 </script>
