@@ -15,8 +15,8 @@
       <h1 class="text-center news" style="italic" >Nuestro Equipo</h1>
         <br>
       <div class="row justify-content-center mb-5">
-        <div class="col mt-5" v-for="(integrante, id) of Equipo" :key="id">
-        <team-card :member="integrante"> </team-card>
+        <div class="col mt-5" v-for="(integrante, id) of team" :key="id">
+        <team-card v-bind:member="integrante"> </team-card>
         </div>
       </div>
     </div>
@@ -33,7 +33,6 @@ import CarouselSection from './components/CarouselSection.vue'
 import FooterSection from './components/FooterSection.vue'
 import TeamCard from './components/TeamCard.vue'
 import NewsSection from './components/NewsSection.vue'
-import datosequipo from '../public/datosequipo.json'
 
 export default {
   name: 'App',
@@ -74,6 +73,7 @@ export default {
         whatsapp: "https://api.whatsapp.com/send?phone=573176550376",
         facebook: "https://m.me/nicovijalba"
       }
+    ]
     }
   }
 }
