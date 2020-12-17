@@ -1,33 +1,31 @@
 <template>
-    <div id="equipo">
-        
-        <div class="card text-white bg-dark">
-            <div class="d-flex justify-content-center p-2">
-                <svg width="12em" height="12em" viewBox="0 0 16 16" class="bi bi-person-bounding-box" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
-                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                </svg>
+    <div>
+        <div class = "card bg-light">
+            <div class = "d-flex justify-content-center p-2">
+                <img :src="member.image" with="200px" height="200px" alt="imagenperfil" class="rounded-circle z-depth-2" data-holder-rendered="true">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Team member 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
+            <div class = "card-body">
+                <h5 class="card-title"> {{ member.nombre }} </h5>
+                <p class="card-text"> {{ member.descripcion }} </p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted"> {{ member.rol }} </small>
+                <a :href="member.whatsapp"><img class="zoom" src="https://www.flaticon.es/svg/static/icons/svg/733/733585.svg"/></a>
+                <a :href="member.facebook"><img class="zoom" style="margin-left:5px" src="https://www.flaticon.es/premium-icon/icons/svg/3670/3670042.svg"/></a>
             </div>
         </div>
-        
     </div>
 </template>
 
-<script>
+<script> 
+    require('./../assets/js/app.js');
     export default {
         name: "TeamCard",
         props: ['member']
     }
 </script>
 
-<style scoped>
 
+<style scoped>
+    @import '../assets/css/app.css';
 </style>
